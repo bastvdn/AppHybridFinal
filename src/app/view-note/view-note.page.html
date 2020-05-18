@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>view-note</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-item>Catégorie: {{note.cat}}</ion-item>
+  <ion-item>Titre: {{note.title}}</ion-item>
+  
+  <ion-item>Contenu: {{note.content}}</ion-item>
+  <ion-item>Id: {{note.id}}</ion-item>
+  <ion-item>Date: {{note.date}}</ion-item>
+
+
+  
+  <ion-button [routerLink]="['/home']">Menu</ion-button>
+</ion-content>

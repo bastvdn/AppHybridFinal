@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>nouvelle catégorie</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Nom</ion-label>
+    <ion-input [(ngModel)]="data.name" placeholder="Nom de la catégorie"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="submitCat()">Ajouter la catégorie
+  </ion-button>
+  <ion-button [routerLink]="['/home']">Menu</ion-button>
+</ion-content>
