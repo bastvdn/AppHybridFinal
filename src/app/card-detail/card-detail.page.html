@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>cardDetail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card ion-item *ngFor="let note of notes | async" (click)="cardDetail()">
+    <ion-card-header>
+      <ion-card-subtitle>{{note.type}}</ion-card-subtitle>
+      <ion-card-title>{{note.title}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{note.content}}
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>
+<ion-footer>
+  <ion-button color="danger" block (click)= "deleteNote()">
+    Effacer la note
+  </ion-button>
+</ion-footer>
