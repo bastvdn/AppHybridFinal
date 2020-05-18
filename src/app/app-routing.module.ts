@@ -11,6 +11,22 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'note-create',
+    loadChildren: () => import('./note-create/note-create.module').then( m => m.NoteCreatePageModule)
+  },
+  {
+    path: 'category-list',
+    loadChildren: () => import('./category-list/category-list.module').then( m => m.CategoryListPageModule)
+  },
+  {
+    path: 'new-category',
+    loadChildren: () => import('./new-category/new-category.module').then( m => m.NewCategoryPageModule)
+  },
+  {
+    path: 'view-note',
+    loadChildren: () => import('./view-note/view-note.module').then( m => m.ViewNotePageModule)
+  },
 ];
 
 @NgModule({

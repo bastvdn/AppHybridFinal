@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>category list</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of categoryList" >
+      {{item.name}}
+      <ion-item slot="end">
+        <ion-button  color="danger" size="small" (click)="delete(item)">
+          <ion-icon name="trash"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-item>
+
+   
+  </ion-list>
+  <ion-button [routerLink]="['/new-category']">
+    Ajouter une catégorie
+  </ion-button>
+  <ion-button [routerLink]="['/home']">Menu</ion-button>
+</ion-content>

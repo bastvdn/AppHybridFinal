@@ -1,0 +1,38 @@
+
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Create Note</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item>
+    <ion-label>Titre:</ion-label>
+    <ion-input [(ngModel)]="data.title" placeholder="Enter Note"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Contenu:</ion-label>
+    <ion-textarea [(ngModel)]="data.content" placeholder="Enter Content"></ion-textarea>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label>Categorie:</ion-label>
+    <ion-select [(ngModel)]="cat" placeholder="Select One" >
+      <ion-select-option value="{{item.id}}" *ngFor="let item of categoryList">{{item.name}}</ion-select-option>
+    
+    </ion-select>
+  </ion-item>
+  
+    <ion-button (click)="submitForm()">Add
+    </ion-button>
+  <ion-button [routerLink]="['/home']">Menu</ion-button>
+
+
+   
+
+  
+
+</ion-content> 
